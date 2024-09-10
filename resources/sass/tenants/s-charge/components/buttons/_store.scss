@@ -1,0 +1,54 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/store
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-store {
+  align-items: center;
+  @include background-default();
+  background-color: $color-white;
+  background-position: center left $space-3x;
+  background-size: 24px;
+  border-radius: 6px;
+  color: $color-black;
+  display: flex;
+  filter: drop-shadow(0 34px 76px rgba(0, 0, 0, 0.25));
+  @include font-medium();
+  justify-content: center;
+  height: 64px;
+  width: 180px;
+
+  @include bp-sm() {
+    filter: drop-shadow(0 45px 100px rgba(0, 0, 0, 0.25));
+    margin-left: $space-4x;
+    margin-right: $space-4x;
+  }
+
+  &.is-apple {
+    background-image: url('../img/icons/icon-apple.png');
+    margin-bottom: $space-10x;
+
+    @include bp-sm() {
+      margin-bottom: 0;
+    }
+  }
+
+  &.is-google {
+    background-image: url('../img/icons/icon-googleplay.png');
+  }
+
+  span {
+    display: block;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    margin-left: $space-3x;
+
+    em {
+      display: block;
+      font-size: 16px !important;
+      margin-top: 3px;
+    }
+  }
+
+}

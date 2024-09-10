@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  background-color: $color-sand;
+}
+
+body.is-light {
+  header.site-header {
+    background-color: $color-white;
+  }
+}

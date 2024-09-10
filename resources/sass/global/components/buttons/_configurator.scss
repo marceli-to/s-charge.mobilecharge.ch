@@ -1,0 +1,75 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle
+ * -----------------------------------------------------------------------------
+ */
+.btn-commissioning,
+.btn-configurator,
+button.btn-commissioning,
+button.btn-configurator,
+input[type="submit"].btn-commissioning,
+input[type="submit"].btn-configurator {
+  align-items: center;
+  border-radius: 500px;
+  display: inline-flex;
+  @include font-bold();
+  @include font-size($fs-sm);
+  justify-content: center;
+  line-height: 1 !important;
+  margin-bottom: $space-6x;
+  min-height: 64px;
+  padding: 0 $space-16x;
+  text-indent: 0;
+  transition: background-color .08s ease-in, border .08s ease-in;
+  width: auto;
+
+  @include bp-sm() {
+    margin-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.is-primary {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: $color-white;
+    order: 1;
+    
+    &.is-touched,
+    &:hover {
+      background-color: $color-black;
+      border: 1px solid $color-black;
+    }
+    
+    @include bp-sm() {
+      order: 2;
+    }
+  }
+
+  &.is-secondary {
+    background-color: transparent;
+    border: 1px solid $color-grey;
+    color: $color-black;
+    order: 2;
+
+    &.is-touched,
+    &:hover {
+      background-color: $color-grey;
+    }
+
+    @include bp-sm() {
+      order: 1;
+    }
+  }
+
+  &.is-download {
+    @include background-default();
+    background-image: url($url-icons + 'icon-document.svg');
+    background-size: 24px auto;
+    background-position: center left $space-6x;
+    @include font-regular();
+    padding-left: $space-16x;
+  }
+}

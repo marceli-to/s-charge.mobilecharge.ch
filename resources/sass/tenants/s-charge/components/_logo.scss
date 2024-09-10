@@ -1,0 +1,44 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/logo
+ * -----------------------------------------------------------------------------
+ */
+
+.logo {
+  height: 48px;
+  width: 164px;
+
+  svg {
+    @extend %is-responsive;
+  }
+
+  @include bp-sm() {
+    left: calc(50% - 82px);
+    position: absolute;
+    top: 48px;
+  }
+
+  @include bp-md() {
+    left: auto;
+    position: relative;
+    top: auto;
+  }
+}
+
+.logo-footer {
+  display: block;
+  height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 164px;
+  
+  @include bp-md() {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  svg {
+    @extend %is-responsive;
+  }
+}
+

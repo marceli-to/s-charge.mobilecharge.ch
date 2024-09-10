@@ -1,0 +1,67 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: config/global
+ * -----------------------------------------------------------------------------
+ *
+ * Global settings and variables
+ *
+ */
+
+/* Base uri
+ * -------------------- */
+
+$asset-uri: '/assets/';
+
+/* Box shadows
+ * -------------------- */
+
+$box-shadow: 0 2px 24px 0 rgba(0, 0, 0, .4);
+$box-shadow-xs: 0 1px 1px rgba(100, 100, 100, 0.3);
+$box-shadow-sm: 0 1px 1px rgba(100, 100, 100, 0.2);
+$box-shadow-lg: 0 0 4px 2px rgba(100, 100, 100, 0.2);
+
+/* Default easing
+ * -------------------- */
+
+$easing: cubic-bezier(0.980, 0.310, 0.940, 0.840);
+
+/* Urls
+ * -------------------- */
+ 
+$url-images: $asset-uri + 'img/';
+$url-icons:  $asset-uri + 'img/icons/';
+$url-svg:    $asset-uri + 'img/svg/';
+
+/* Breakpoints
+ * -------------------- */
+
+$bp-sm:  768px;
+$bp-md: 1024px;
+$bp-lg: 1280px;
+$bp-xl: 1440px;
+
+$breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg  
+);
+
+/* Header
+ * -------------------- */
+
+$header-height: 96px;
+$header-height-sm: 152px;
+$header-height-md: 192px;
+
+/* Site / Content
+ * -------------------- */
+
+$content-max-width: 1240px;
+
+/* Grids
+ * -------------------- */
+
+$grid-gap-sm: 10px;
+$grid-gap-md: 15px;
+
+

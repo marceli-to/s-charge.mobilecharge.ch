@@ -1,0 +1,33 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/domain
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-domain {
+
+  svg {
+
+    circle {
+      fill: $color-white;
+    }
+
+    path {
+      fill: $color-primary;
+    }
+  }
+
+  &:hover {
+    svg {
+
+      circle {
+        fill: $color-primary;
+        stroke: $color-primary;
+      }
+
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}

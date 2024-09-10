@@ -1,0 +1,172 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/pricing
+ * -----------------------------------------------------------------------------
+ */
+
+section.pricing {
+  padding-top: $space-12x;
+  padding-bottom: 124px;
+
+  @include bp-sm() {
+    padding-top: $space-16x;
+  }
+
+  @include bp-lg() {
+    padding-top: $space-19x;
+  }
+
+  > div {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include bp-sm() {
+      padding-left: $space-8x;
+      padding-right: $space-8x;
+    }
+
+    h2 {
+      color: $color-black;
+      @include font-bold();
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: $space-6x;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include bp-sm() {
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    strong {
+      color: $color-black;
+    }
+
+    .pricing-description {
+      padding-bottom: $space-16x;
+
+      &.is-last {
+        border: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        display: block;
+        padding-bottom: 0 !important;
+        margin-top: $space-4x;
+      }
+
+      @include bp-sm() {
+        border: 1px solid $color-grey;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 0;
+      }
+
+      > div {
+        @include font-size($fs-pricing);
+        margin-bottom: $space-16x;
+        padding-left: $space-4x;
+        padding-right: $space-4x;
+        
+        &.is-last {
+          margin-bottom: 0;
+        }
+
+        > div {
+          margin-bottom: $space-8x;
+
+          @include bp-sm() {
+            margin-bottom: 0;
+          }
+        }
+
+        @include bp-sm() {
+          margin-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:nth-child(2) {
+            border-left: 1px solid $color-grey;
+            border-right: 1px solid $color-grey;
+          }
+
+          > div {
+            border-bottom: 1px solid $color-grey;
+            padding: $space-6x $space-4x;
+
+            &.is-last {
+              border-bottom: none !important;
+            }
+          }
+        }
+
+        @include bp-md() {
+          > div {
+            padding: $space-5x;
+          }
+        }
+
+        @include bp-lg() {
+          > div {
+            padding: $space-8x;
+          }
+        }
+      }
+
+      ul.dash {
+        margin-top: $space-4x;
+      }
+    }
+
+    .pricing-data {
+      border-bottom: 1px solid $color-grey;
+      @include font-size($fs-xs);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      @include bp-sm() {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-left: 1px solid $color-grey;
+        border-right: 1px solid $color-grey;
+      }
+
+      > div {
+        border-top: 1px solid $color-grey;
+        padding: $space-3x;
+
+        @include bp-sm() {
+          padding: $space-4x;
+        }
+
+        @include bp-md() {
+          padding: $space-5x;
+        }
+        
+        @include bp-lg() {
+          padding: $space-8x;
+        }
+
+        &:empty {
+          border-top: 1px solid $color-white !important;
+        }
+
+        &:nth-child(3n+2) {
+          border-left: 1px solid $color-grey;
+          border-right: 1px solid $color-grey;
+        }
+
+        strong {
+          display: block;
+          @include bp-md() {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+}

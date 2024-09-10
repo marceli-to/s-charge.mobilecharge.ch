@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/video
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.video-wrapper {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe {
+    border-radius: 12px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

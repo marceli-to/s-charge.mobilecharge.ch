@@ -1,0 +1,27 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: component/headings/h1
+ * -----------------------------------------------------------------------------
+ */
+
+h1 {
+  color: $color-secondary;
+  @include font-bold();
+  @include font-size($fs-xl);
+  margin-bottom: $space-8x;
+
+  @include bp-sm() {
+    margin-bottom: $space-24x;
+  }
+  
+  @include bp-md() {
+    margin-bottom: 124px;
+  }
+
+  &.is-narrow {
+    margin-bottom: $space-4x;
+    @include bp-lg() {
+      margin-bottom: $space-8x;
+    }
+  }
+}

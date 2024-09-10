@@ -1,0 +1,56 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/cloud
+ * -----------------------------------------------------------------------------
+ */
+
+section.cloud {
+
+  article.text-media {
+
+    > div {
+      @include bp-md() {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .text-media__body {
+          flex: 0 0 410px;
+          order: 1;
+        }
+
+        .text-media__image {
+          flex: 0 0 495px;
+          order: 2;
+        }
+      }
+
+      @include bp-lg() {
+
+        .text-media__image {
+          flex: 0 0 700px;
+        }
+      }
+    }
+
+    header {
+      margin-bottom: $space-12x;
+      text-align: center;
+
+      @include bp-sm() {
+        margin-bottom: $space-24x;
+      }
+
+      h1 {
+        margin-bottom: $space-2x;
+      }
+    }
+
+    .text-media__body {
+      margin-top: $space-10x;
+      @include bp-sm() {
+        margin-top: $space-11x;
+      }
+    }
+  }
+}

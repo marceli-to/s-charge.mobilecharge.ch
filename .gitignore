@@ -1,0 +1,36 @@
+/node_modules
+/public/hot
+/public/storage
+/public/.htaccess
+/storage/*.key
+/vendor
+/.idea
+/.vscode
+/nbproject
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.env
+.phpunit.result.cache
+ws.code-workspace
+
+
+/public/storage
+
+
+# Ignore Mac DS_Store files
+.DS_Store
+
+# Ignore Sass cache folders
+.sass-cache
+
+# Ignore node_modules
+node_modules/
+
+# Ignore .env
+.env.*
+
+/INSTALL.txt
+

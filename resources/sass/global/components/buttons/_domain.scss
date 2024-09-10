@@ -1,0 +1,32 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/domain
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-domain {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: $color-black;
+
+  svg {
+    border-radius: 50%;
+    display: block;
+    height: auto;
+    width: 200px;
+
+    circle, 
+    path {
+      transition: all .12s ease-in;
+    }
+  }
+
+  span {
+    display: block;
+    @include font-size($fs-md);
+    @include font-medium();
+    margin-top: $space-8x;
+    text-align: center;
+  }
+}

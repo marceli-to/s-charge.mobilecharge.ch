@@ -1,0 +1,36 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/counter
+ * -----------------------------------------------------------------------------
+ */
+
+.counter {
+  align-items: center;
+  display: flex;
+  
+  a[class^='btn'] {
+    @include background-default();
+    background-position: center center;
+    background-size: 100%;
+    height: 32px;
+    position: relative;
+    width: 32px;
+    
+    &.btn-increment {
+      background-image: url($url-icons + 'icon-plus-round.svg');
+    }
+
+    &.btn-decrement {
+      background-image: url($url-icons + 'icon-minus-round.svg');
+    }
+  }
+
+  .count {
+    color: $color-black;
+    @include font-medium();
+    @include font-size($fs-sm);
+    margin: 0 $space-6x;
+    min-width: 32px;
+    text-align: center;
+  }
+}

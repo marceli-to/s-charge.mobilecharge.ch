@@ -1,0 +1,45 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/cross
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-cross {
+  @include background-default();
+  background-image: url('../img/icons/icon-cross.svg');
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  left: $space-4x;
+  position: absolute;
+  top: $space-9x;
+  width: 24px;
+
+  @include bp-sm() {
+    left: $space-8x;
+    top: $space-15x;
+  }
+
+  @include bp-md() {
+    display: none;
+  }
+}
+
+.btn-cross-menu {
+  @include background-default();
+  background-image: url('../img/icons/icon-cross.svg');
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  left: $space-4x;
+  position: absolute;
+  top: $space-9x;
+  width: 24px;
+
+  @include bp-sm() {
+    left: auto;
+    right: $space-4x;
+    top: $space-4x;
+  }
+
+}

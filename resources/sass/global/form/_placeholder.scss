@@ -1,0 +1,21 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/placeholder
+ * -----------------------------------------------------------------------------
+ */
+
+input[type=text]::-webkit-input-placeholder {
+  color: $color-black;
+}
+
+input[type=text]::-moz-placeholder {
+  color: $color-black;
+}
+
+input[type=text]:-ms-input-placeholder {
+  color: $color-black;
+}
+
+input[type=text]:-moz-placeholder {
+  color: $color-black;
+}

@@ -1,0 +1,24 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/section
+ * -----------------------------------------------------------------------------
+ */
+
+section {
+
+  > div {
+    @extend %inner-block;
+  }
+
+  img {
+    @extend %is-responsive;
+  }
+  
+  figure, picture {
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}

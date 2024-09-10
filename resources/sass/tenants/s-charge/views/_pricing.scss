@@ -1,0 +1,92 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/pricing-new
+ * -----------------------------------------------------------------------------
+ */
+
+section.pricing-intro,
+section.pricing-content {
+
+  strong {
+    color: $color-black;
+    @include font-medium();
+  }
+
+  p {
+    margin-bottom: $space-6x;
+    &:last-of-type,
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+section.pricing-intro {
+  padding: $space-16x 0;
+
+  @include bp-sm() {
+    padding: $space-24x 0;
+  }
+
+  > div {
+    @extend %inner-block;
+  }
+
+  h1 {
+    margin-bottom: $space-8x;
+
+    @include bp-sm() {
+      margin-bottom: $space-8x;
+    }
+    
+    @include bp-md() {
+      margin-bottom: $space-8x;
+    }
+  }
+
+  p {
+    @extend %mx-auto;
+    max-width: 760px;
+  }
+}
+
+section.pricing-content {
+  padding-top: 0;
+  padding-bottom: $space-16x;
+
+  @include bp-sm() {
+    padding-top: 0;
+    padding-bottom: $space-24x;
+  }
+
+  > div {
+    @extend %inner-block;
+  }
+
+  header {
+    text-align: center;
+
+    p {
+      @extend %mx-auto;
+      max-width: 760px;
+      text-align: left;
+    }
+
+  }
+
+  p {
+    @include font-size($fs-default);
+  }
+
+  h2 {
+    color: $color-black;
+    @include font-bold();
+    @include font-size($fs-pricing-header-2);
+    margin-bottom: $space-6x;
+  }
+  
+  h3 {
+    @include font-medium();
+    line-height: 1 !important;
+  }
+}

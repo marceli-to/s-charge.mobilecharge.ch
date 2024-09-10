@@ -1,0 +1,43 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/login
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-login {
+  @include background-default();
+  background-image: url('../img/icons/login.svg');
+  background-size: 100%;
+  display: none;
+  height: 24px;
+  text-indent: -7777px;
+  width: 24px;
+
+  @include bp-md() {
+    display: block;
+  }
+
+  span {
+    display: none;
+  }
+
+  @include bp-lg() {
+    align-items: center;
+    background-image: none;
+    border: 2px solid $color-primary;
+    border-radius: 56px;
+    color: $color-primary;
+    display: flex;
+    @include font-bold();
+    justify-content: center;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    text-indent: 0;
+    height: 56px;
+    width: 164px;
+
+    span {
+      display: block;
+    }
+  }
+}

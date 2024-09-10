@@ -1,0 +1,194 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/configurator/layout
+ * -----------------------------------------------------------------------------
+ */
+
+.configurator-domain {
+  padding-bottom: 0;
+
+  > div {
+    @include bp-xl() {
+      max-width: 1440px !important;
+    }
+  }
+
+  .configurator-header {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    h1 {
+      margin-bottom: $space-16x;
+      
+      @include bp-md() {
+        margin-bottom: $space-24x;
+      }
+  
+      @include bp-xl() {
+        margin-bottom: 124px;
+      }
+    }
+  }
+
+  article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+  
+    @include bp-sm() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: $space-24x;
+      margin-bottom: 0;
+
+    }
+  
+    @include bp-md() {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    @include bp-xl() {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  
+    > div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: $space-16x;
+
+      @include bp-sm() {
+        margin-bottom: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.configurator-app {
+  @include bp-md() {
+    padding-bottom: 0 !important;
+  }
+
+  .configurator-header {
+  
+    h1 {
+      margin-bottom: $space-14x;
+      
+      @include bp-md() {
+        margin-bottom: $space-12x;
+      }
+  
+      @include bp-lg() {
+        margin-bottom: $space-24x;
+      }
+    }
+  }
+
+  .configurator-footer {
+    margin-top: $space-16x;
+
+    @include bp-lg() {
+      margin-top: $space-24x;
+    }
+
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include bp-sm() {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .configurator-option {
+    border: 1px solid $color-grey;
+    border-radius: 12px;
+    margin-bottom: $space-6x;
+
+    @include bp-lg() {
+      margin-bottom: $space-10x;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .configurator-option__content {
+
+      .option-elements {
+        display: none;
+      }
+
+      .option-element {
+        border-top: 1px solid $color-grey;
+        @include font-size($fs-default);
+        padding: $space-6x;
+
+        @include bp-sm() {
+          padding: $space-8x;
+        }
+
+        &.is-hidden {
+          display: none !important;
+        }
+
+        &.is-option {
+          border-top: none;
+          padding-top: $space-2x;
+          @include bp-sm() {
+            padding-top: $space-4x;
+            padding-bottom: $space-10x;
+          }
+        }
+
+        h3 {
+          color: $color-black;
+          @include font-size($fs-sm);
+          @include bp-sm() {
+            margin-bottom: $space-1x;
+          }
+        }
+
+        > div:first-of-type {
+          margin-bottom: $space-5x;
+          @include bp-sm() {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .option-element__child {
+        padding: $space-8x 0 0 0;
+        
+        @include bp-sm() {
+          padding: $space-10x 0 0 0;
+        }
+
+        > div:first-of-type {
+          margin-bottom: $space-5x;
+          @include bp-sm() {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &.is-active {
+      box-shadow: 0  0 40px 0 rgba(0, 0, 0, .2);
+      .configurator-option__content {
+        .option-elements {
+          display: block;
+        }
+      }
+    }
+  }
+}

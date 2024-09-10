@@ -1,0 +1,26 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/header
+ * -----------------------------------------------------------------------------
+ */
+
+header.site-header {
+  height: $header-height;
+
+  @include bp-sm() {
+    height: $header-height-sm;
+    position: relative;
+  }
+
+  @include bp-md() {
+    height: $header-height-md;
+  }
+
+  > div {
+    @extend %inner-block;
+    align-items: center;
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+  }
+}

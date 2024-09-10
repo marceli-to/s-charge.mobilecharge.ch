@@ -1,0 +1,79 @@
+
+.swiper-project {
+  border-radius: 12px;
+  height: auto;
+  width: 100%;
+
+  img {
+    aspect-ratio: 16 / 9;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.swiper-project-button-next,
+.swiper-project-button-prev {
+  color: $color-white !important
+}
+
+.swiper-pagination {
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+  position: relative;
+  width: 100% !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-grey !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-primary !important;
+}
+
+.swiper-pricing {
+  padding-top: $space-2x !important;
+}
+
+nav.swiper-nav {
+  align-items: center;
+  background-color: $color-white;
+  height: 58px;
+  display: grid;
+  grid-template-columns: 48px auto 48px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+.swiper-pricing-button-next,
+.swiper-pricing-button-prev {
+  background-color: $color-white;
+  border: 1px solid $color-grey;
+  border-radius: 12px;
+  height: 48px;
+  margin: 0 !important;
+  position: relative;
+  width: 48px;
+  top: auto !important;
+  left: auto !important;
+  bottom: auto !important;
+  right: auto !important;
+
+  &:after {
+    display: none;
+  }
+}
+
+.swiper-pricing-button-prev {
+  margin-left: -2px !important;
+}
+
+.swiper-pricing-button-next {
+  margin-right: -2px !important;
+}

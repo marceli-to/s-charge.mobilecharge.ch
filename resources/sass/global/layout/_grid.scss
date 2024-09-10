@@ -1,0 +1,87 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/grid
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+%grid,
+.grid {
+  @include bp-md() {
+    display: grid;
+  }
+}
+
+%grid-sm,
+.grid-sm {
+  @include bp-sm() {
+    display: grid;
+  }
+}
+
+
+.grid-2x1 {
+  @extend %grid;
+  @include bp-md() {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: $space-10x;
+  }
+}
+
+// Grids 1 - 12
+@for $i from 1 through 12 {
+  %grid-cols-#{$i},
+  .grid-cols-#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, minmax(0, 1fr));
+  }
+}
+
+// Grids 1 - 12 (sm and up)
+@for $i from 1 through 12 {
+  %grid-cols-#{$i}\:sm,
+  .grid-cols-#{$i}\:sm {
+    @extend %grid-sm;
+    grid-template-columns: repeat($i, minmax(0, 1fr));
+  }
+}
+
+// Grids without columns
+%grid-cols-none,
+.grid-cols-none {
+  grid-template-columns: none;
+}
+
+// Grids without gap
+%grid-gap-none {
+  grid-column-gap: 0;
+}
+
+// Grid column spans (1 - 12)
+@for $i from 1 through 12 {
+  %span-#{$i},
+  .span-#{$i} {
+    grid-column: span $i / span $i;
+  }
+}
+
+%span-full,
+.span-full	{
+  grid-column: 1 / -1;
+}
+
+// Grid column start position
+@for $i from 1 through 12 {
+  %start-#{$i},
+  .start-#{$i} {
+    grid-column-start: $i;
+  }
+}
+
+// Grid column end position
+@for $i from 1 through 12 {
+  %end-#{$i},
+  .end-#{$i} {
+    grid-column-start: $i;
+  }
+}

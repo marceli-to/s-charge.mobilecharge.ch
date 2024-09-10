@@ -1,0 +1,49 @@
+/**
+ * Collapsibles
+ * -----------------------------------------------------------------------------
+ */
+
+.collapsible {
+  width: 100%;
+
+  &.is-last {
+    border-bottom: 1px solid $color-grey;
+  }
+
+  .btn-collapsible {
+    @extend %btn-bg;
+    background-image: url($url-icons + 'icon-chevron-down.svg');
+    background-size: 16px;
+    background-position: top 16px right;
+    border-top: 1px solid $color-grey;
+    color: $color-black;
+    display: block;
+    padding: $space-4x 50px $space-4x 0;
+    text-decoration: none !important;
+    width: 100%;
+  }
+}
+
+.collapsible__content {
+  overflow: hidden;
+
+  > div {
+    padding: 0 0 $space-4x 0;
+    opacity: 0;
+    transition: opacity .24s ease-in-out;
+  }
+}
+
+.collapsible.is-expanded {
+  
+  .collapsible__content {
+    > div {
+      opacity: 1;
+      transition: opacity .24s ease-in-out;
+    }
+  }
+
+  .btn-collapsible {
+    background-image: url($url-icons + 'icon-chevron-up.svg');
+  }
+}

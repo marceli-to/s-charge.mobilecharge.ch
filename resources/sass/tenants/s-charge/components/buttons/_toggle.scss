@@ -1,0 +1,33 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle-options
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-toggle {
+  > div {
+    border: 1px solid $color-grey;
+
+    svg {
+      circle {
+        fill: $color-primary;
+      }
+  
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+.is-active {
+
+}
+
+.is-complete {
+  .btn-toggle {
+    > div {
+      border-color: $color-primary;
+    }
+  }
+}

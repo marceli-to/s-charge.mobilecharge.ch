@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/base
+ * -----------------------------------------------------------------------------
+ */
+
+html {
+	overflow-y: scroll;
+}
+
+
+body {
+	color: $color-dark;
+	@include font-smoothing();
+	position: relative;
+}
+
+// Scrollbars
+@include scrollbar(6px, #aac140);

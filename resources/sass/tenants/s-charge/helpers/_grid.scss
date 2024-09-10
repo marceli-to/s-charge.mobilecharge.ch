@@ -1,0 +1,142 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/grid
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+// display: grid;
+%grid, 
+.grid {
+  display: grid;
+}
+@each $bp, $width in $breakpoints {
+  %#{$bp}\:grid, 
+  .#{$bp}\:grid {
+    @media (min-width: $width) {
+      display: grid;
+    }
+  }
+}
+
+// grid-template-columns: xyz;
+@for $i from 1 through 12 {
+  %grid-cols-#{$i}, 
+  .grid-cols-#{$i} {
+    grid-template-columns: repeat($i, minmax(0, 1fr));
+  }
+}
+@each $bp, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    %#{$bp}\:grid-cols-#{$i}, 
+    .#{$bp}\:grid-cols-#{$i} {
+      @media (min-width: $width) {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+// grid-template-columns: none;
+%grid-cols-none,
+.grid-cols-none {
+  grid-template-columns: none;
+}
+@each $bp, $width in $breakpoints {
+  %#{$bp}\:grid-cols-none, 
+  .#{$bp}\:grid-cols-none {
+    @media (min-width: $width) {
+      grid-template-columns: none;
+    }
+  }
+}
+
+%grid-gap,
+.grid-gap {
+  grid-gap: 16px;
+}
+@each $bp, $width in $breakpoints {
+  %#{$bp}\:grid-gap, 
+  .#{$bp}\:grid-gap {
+    @media (min-width: $width) {
+      grid-gap: 16px;
+    }
+  }
+}
+
+%grid-column-gap,
+.grid-column-gap {
+  grid-column-gap: 16px;
+}
+@each $bp, $width in $breakpoints {
+  %#{$bp}\:grid-column-gap, 
+  .#{$bp}\:grid-column-gap {
+    @media (min-width: $width) {
+      grid-column-gap: 16px;
+    }
+  }
+}
+
+%grid-row-gap,
+.grid-row-gap {
+  grid-row-gap: 16px;
+}
+
+%grid-gap-none,
+.grid-gap-none {
+  grid-column-gap: 0;
+}
+
+// grid-column: xyz;
+@for $i from 1 through 12 {
+  %col-span-#{$i}, 
+  .col-span-#{$i} {
+    grid-column: span $i / span $i;
+  }
+}
+@each $bp, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    %#{$bp}\:col-span-#{$i}, 
+    .#{$bp}\:col-span-#{$i} {
+      @media (min-width: $width) {
+        grid-column: span $i / span $i;
+      }
+    }
+  }
+}
+
+// grid-column-start: xyz;
+@for $i from 1 through 12 {
+  %start-#{$i}, 
+  .start-#{$i} {
+    grid-column-start: $i !important;
+  }
+}
+@each $bp, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    %#{$bp}\:start-#{$i}, 
+    .#{$bp}\:start-#{$i} {
+      @media (min-width: $width) {
+        grid-column-start: $i !important;
+      }
+    }
+  }
+}
+
+// grid-column-end: xyz;
+@for $i from 1 through 12 {
+  %end-#{$i}, 
+  .end-#{$i} {
+    grid-column-end: $i !important;
+  }
+}
+@each $bp, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    %#{$bp}\:end-#{$i}, 
+    .#{$bp}\:end-#{$i} {
+      @media (min-width: $width) {
+        grid-column-end: $i !important;
+      }
+    }
+  }
+}

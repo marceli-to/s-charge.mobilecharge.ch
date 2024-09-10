@@ -1,0 +1,18 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/validation
+ * -----------------------------------------------------------------------------
+ */
+
+.has-error {
+  color: $color-danger;
+  
+  label {
+    color: $color-danger;
+  }
+}
+
+.error-message {
+  color: $color-danger;
+  margin: $space-3x 0;
+}

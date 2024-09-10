@@ -1,0 +1,12 @@
+/**
+ * Collapsibles
+ * -----------------------------------------------------------------------------
+ */
+
+.collapsible {
+
+  .btn-collapsible {
+    @include font-medium();
+    @include font-size($fs-md);
+  }
+}

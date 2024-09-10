@@ -1,0 +1,126 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/pricing
+ * -----------------------------------------------------------------------------
+ */
+
+section.partners {
+  padding-top: $space-12x;
+  padding-bottom: 124px;
+
+  @include bp-sm() {
+    padding-top: $space-16x;
+  }
+
+  @include bp-md() {
+    padding-bottom: 0;
+  }
+
+  @include bp-lg() {
+    padding-top: $space-19x;
+  }
+
+  > div {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include bp-sm() {
+      padding-left: $space-8x;
+      padding-right: $space-8x;
+    }
+  }
+
+  h2 {
+    color: $color-black;
+    @include font-bold();
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: $space-12x;
+
+    @include bp-sm() {
+      margin-bottom: $space-18x;
+      font-size: 32px;
+    }
+
+    @include bp-md() {
+      font-size: 36px;
+    }
+
+  }
+
+  .cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  article {
+    margin-bottom: $space-16x;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
+
+    @include bp-sm() {
+      margin-bottom: $space-20x;
+    }
+
+    @include bp-lg() {
+      margin-bottom: $space-24x;
+    }
+  }
+
+  .partners__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $space-4x;
+    grid-row-gap: $space-16x;
+
+    @include bp-sm() {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include bp-md() {
+      grid-row-gap: $space-20x;
+    }
+
+    @include bp-lg() {
+      grid-row-gap: $space-24x;
+    }
+
+    > div {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      img {
+        border: none !important;
+        border-radius: 0 !important;
+        display: block;
+        height: auto;
+        max-height: 45px;
+        width: auto;
+
+        @include bp-sm() {
+          max-height: 60px;
+        }
+
+        @include bp-md() {
+          max-height: 80px;
+        }
+
+        &.is-wide {
+          max-height: 70px;
+
+          @include bp-sm() {
+            max-height: 90px;
+          }
+
+          @include bp-md() {
+            max-height: 120px;
+          }
+        }
+      }
+    }
+  }
+}

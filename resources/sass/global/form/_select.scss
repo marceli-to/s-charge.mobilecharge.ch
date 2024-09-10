@@ -1,0 +1,57 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/select
+ * -----------------------------------------------------------------------------
+ */
+
+.select-wrapper {
+  background-color: transparent;
+  display: inline-block;
+  min-height: 56px;
+  min-width: 140px;
+  position: relative;
+  width: auto;
+
+  &.is-wide {
+    max-width: 380px;
+    width: 100%;
+  }
+
+  &.is-full {
+    width: 100%;
+  }
+
+	&:after {
+    @include background-default();
+    background-image: url($url-icons + 'icon-chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px auto;
+    background-color: transparent;
+    border: none;
+    content: '';
+    height: 100%;
+    right: 20px;
+    position: absolute;
+    top: 0;
+    width: 16px;
+    z-index: 1;
+  }
+
+  select {
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 500px;
+    color: $color-black;
+    display: block;
+    @include font-medium();
+    @include font-size($fs-sm);
+    min-height: inherit;
+    padding: 0 50px 0 20px;
+    width: 100%;
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

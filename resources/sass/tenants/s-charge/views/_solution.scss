@@ -1,0 +1,63 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/solution
+ * -----------------------------------------------------------------------------
+ */
+
+ section.solution {
+
+  article {
+
+    > div {
+  
+      @include bp-md() {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .text-media__image {
+      display: block;
+      margin-bottom: $space-8x;
+
+      @include bp-md() {
+        flex: 0 0 480px;
+        margin-bottom: 0;
+        order: 2;
+      }
+
+      @include bp-lg() {
+        flex: 0 0 600px;
+      }
+    }
+
+    .text-media__body {
+
+      ul {
+        margin-top: $space-10x;
+        @include bp-md() {
+          margin-top: 0;
+        }
+      }
+
+      @include bp-md() {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: $space-16x;
+        order: 1;
+
+        h1 {
+          margin-bottom: $space-8x;
+          text-align: left;
+        }
+      }
+      
+      @include bp-lg() {
+        flex: 0 0 470px;
+        padding-right: 0;
+      }
+
+    }
+  }   
+}

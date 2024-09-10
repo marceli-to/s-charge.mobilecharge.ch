@@ -1,0 +1,31 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/position
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.top-20 {
+  top: 20px
+}
+

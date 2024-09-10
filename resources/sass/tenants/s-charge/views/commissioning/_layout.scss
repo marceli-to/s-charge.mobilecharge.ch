@@ -1,0 +1,391 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/commissioning/layout
+ * -----------------------------------------------------------------------------
+ */
+
+.commissioning-app {
+  background-color: $color-secondary;
+  color: $color-white;
+
+  .loading {
+    background-color: $color-white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    transition: all .2s ease-in-out;
+    width: 100%;
+    z-index: -1;
+
+    &.is-visible {
+      opacity: 1;
+      z-index: 2000;
+    }
+
+    > div {
+      color: $color-primary;
+      @include font-medium();
+      @include font-size($fs-sm);
+    }
+  }
+
+  p, ul {
+    margin-bottom: $space-4x !important;
+    max-width: 800px;
+  }
+
+  @include bp-md() {
+    padding-bottom: 0 !important;
+  }
+
+  .commissioning-header {
+  
+    h1 {
+      color: $color-tertiary;
+      margin-bottom: $space-8x;
+    }
+
+    > div {
+      margin-bottom: $space-12x;
+
+      p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .commissioning-footer {
+    margin-top: $space-16x;
+
+    @include bp-lg() {
+      margin-top: $space-24x;
+    }
+
+    > div {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include bp-sm() {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .commissioning-option {
+    background-color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 6px;
+    margin-bottom: $space-6x;
+    opacity: 1;
+
+    @include bp-lg() {
+      margin-bottom: $space-10x;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    
+    .btn-toggle {
+
+      &.is-disabled {
+        pointer-events: none;
+        opacity: .25;
+      }
+
+      span {
+        line-height: 1 !important;
+        @include font-size($fs-md);
+      }
+    }
+
+    &.has-error {
+      color: $color-danger !important;
+    }
+    
+    .commissioning-option__content {
+      color: $color-dark;
+
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: disc;
+
+        li {
+          @extend %ml-20x;
+          @extend %mb-4x;
+          display: list-item;
+        }
+      }
+
+      .option-elements {
+        display: none;
+      }
+
+      .option-element {
+        border-top: 1px solid $color-grey;
+        @include font-size($fs-default);
+        padding: $space-6x;
+
+        @include bp-sm() {
+          padding: $space-8x;
+        }
+
+        &.is-hidden {
+          display: none !important;
+        }
+
+        &.is-option {
+          border-top: none;
+          padding-top: $space-2x;
+          @include bp-sm() {
+            padding-top: $space-4x;
+            padding-bottom: $space-10x;
+          }
+        }
+      }
+
+      .option-element__child {
+        padding: $space-8x 0 0 0;
+        
+        @include bp-sm() {
+          padding: $space-10x 0 0 0;
+        }
+      }
+    }
+
+    &.is-active {
+      // box-shadow: 0  0 40px 0 rgba(255, 255, 255, .5);
+      .commissioning-option__content {
+        .option-elements {
+          display: block;
+        }
+      }
+    }
+
+    .commissioning-option__content {
+
+      h3 {
+        @extend %mb-16x;
+        color: $color-secondary;
+        @include font-size($fs-md);
+
+        em {
+          @include font-regular();
+        }
+      }
+
+      a {
+        color: $color-tertiary;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-thickness: 1px;
+          text-underline-offset: 4px;
+        }
+
+        &.is-dark {
+          color: $color-black;
+        }
+      }
+
+      .commissioning-element {
+        border-top: 1px solid $color-grey;
+      }
+
+    }
+  }
+
+  .lightbox {
+    background-color: rgba(0,0,0,0.9);
+    > div {
+      background-color: $color-white;
+      max-width: 400px !important;
+      min-width: 90%;
+      @include bp-sm() {
+        max-width: 600px !important;
+        min-width: 600px;
+      }
+
+      .btn-commissioning {
+        @extend %px-32x;
+      }
+      // a class name should no start with .btn
+      a:not(.btn-commissioning) {
+        color: $color-primary;
+      }
+
+    }
+
+    .is-success {
+      color: $color-success;
+    }
+
+    form {
+      @extend %p-24x;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+
+      a:not(.btn-commissioning) {
+        @include font-size($fs-xs);
+      }
+    }
+  }
+
+  .btn-commissioning {
+    background-color: $color-primary;
+    @include font-size($fs-md);
+    &.is-secondary {
+      background-color: $color-secondary;
+      color: $color-white;
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+
+  .btn-remove-user {
+    @include font-medium();
+  }
+
+  // Form stuff
+  .form-group {
+    @extend %mb-36x;
+    @extend %lg\:mb-56x;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
+
+    > header {
+      @extend %mb-12x;
+      @extend %lg\:mb-16x;
+    }
+  }
+
+  .form-input {
+    @extend %mb-12x;
+    @extend %lg\:mb-24x;
+
+    label {
+      @extend %mb-6x;
+      color: $color-black;
+      display: block;
+  
+      &.has-error {
+        color: $color-danger;
+      }
+  
+      em {
+        color: $color-danger;
+      }
+    }
+
+    input[type=date],
+    input[type=text],
+    input[type=email] {
+      align-content: center;
+      border: 1px solid $color-grey;
+      border-radius: 12px;
+      min-height: $space-14x;
+      display: inline-flex;
+      @include font-size($fs-sm);
+      @include font-medium();
+      padding: 0 $space-4x;
+  
+      &.has-error {
+        border-color: $color-danger;
+      }
+    }
+
+    input[type="file"]::file-selector-button {
+      border: transparent;
+      padding: 12px 24px;
+      border-radius: 500px;
+      background-color: $color-primary;
+      color: $color-white;
+      transition: background-color .2s ease-in-out;
+    }
+
+    input[type="file"]::file-selector-button:hover {
+      background-color: $color-black;
+    }
+    // style placeholder for input fields
+    input::placeholder {
+      color: $color-light-grey;
+    }
+
+
+    .select-wrapper {
+      select {
+        border-radius: 12px;
+        @include font-medium();
+      }
+    }
+
+    .radio {
+      @extend %mb-16x;
+      @extend %sm\:mr-32x;
+      @extend %sm\:mb-0;
+      
+      &.has-error {
+        border-color: $color-danger;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      button {
+        line-height: 1 !important;
+        @include font-bold();
+        @include font-size($fs-md);
+        color: $color-dark;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .has-group-error {
+    .btn-toggle {
+      color: $color-danger !important;
+      span {
+        color: $color-danger !important;
+      }
+    }
+  }
+
+  .has-error {
+    color: $color-danger !important;
+
+    * {
+      color: $color-danger !important;
+    }
+
+
+  }
+
+  .message-success {
+    color: $color-success;
+    @include font-medium();
+  }
+
+  .message-errors {
+    color: $color-danger;
+    @include font-medium();
+  }
+}

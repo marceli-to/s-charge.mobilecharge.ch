@@ -1,0 +1,82 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/border
+ * -----------------------------------------------------------------------------
+ *
+ * Helpers for borders
+ *
+ */
+
+$border-radius: 12px;
+$border-color: $color-grey;
+
+%border,
+.border {
+  border: 1px solid $border-color;
+}
+
+%border-rounded,
+.border-rounded {
+  border-radius: $border-radius;
+}
+
+%border-x,
+.border-x {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+%border-y,
+.border-y {
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+%border-top,
+.border-top {
+  border-top: 1px solid $border-color;
+}
+
+%border-top-left,
+.border-top-left {
+  border-top-left-radius: $border-radius;
+}
+
+%border-top-right,
+.border-top-right {
+  border-top-right-radius: $border-radius;
+}
+
+%border-right,
+.border-right {
+  border-right: 1px solid $border-color;
+}
+
+%border-bottom,
+.border-bottom {
+  border-bottom: 1px solid $border-color;
+}
+
+%border-bottom-right,
+.border-bottom-right {
+  border-bottom: 1px solid $border-color;
+  border-bottom-right-radius: $border-radius;
+}
+
+%border-left,
+.border-left {
+  border-left: 1px solid $border-color;
+}
+
+%border-bottom-left,
+.border-bottom-left {
+  border-bottom: 1px solid $border-color;
+  border-bottom-left-radius: $border-radius;
+}
+
+%border-collapse,
+.border-collapse {
+  border-collapse: collapse;
+}
+
+

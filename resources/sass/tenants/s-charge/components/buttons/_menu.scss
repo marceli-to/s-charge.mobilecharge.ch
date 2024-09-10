@@ -1,0 +1,18 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/menu
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-menu {
+  @include background-default();
+  background-image: url('../img/icons/menu.svg');
+  background-size: 100%;
+  display: block;
+  height: 24px;
+  width: 24px;
+
+  @include bp-md() {
+    display: none;
+  }
+}

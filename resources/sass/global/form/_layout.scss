@@ -1,0 +1,114 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/layout
+ * -----------------------------------------------------------------------------
+ */
+
+// Input
+.form-group {
+	align-items: center;
+	display: block;
+	margin-bottom: $space-3x;
+	position: relative;
+
+	@include bp-lg() {
+		margin-bottom: $space-6x;
+	}
+}
+
+.form-grid {
+	margin-bottom: $space-3x;
+
+	@include bp-sm() {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-gap: $space-3x;
+	}
+
+	.form-group {
+		margin-bottom: $space-3x;
+		@include bp-sm() {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Radio/Checkboxes
+.form-group-radio,
+.form-group-checkbox {
+	display: flex;
+	margin-bottom: $space-2x;
+	position: relative;
+
+	> div {
+		flex: 0 0 35px;
+		padding-top: 3px;
+	}
+
+	input[type=radio], 
+	input[type=checkbox] {
+		height: 20px;
+		width: 20px;
+		opacity: 0;
+		position: absolute;
+		padding: 10px;
+		left: 0;
+		top: 3px;
+		z-index: 1;
+	}
+
+	input[type=radio]:checked + .radio span, 
+	input[type=checkbox]:checked + .checkbox span {
+		background-color: $color-black;
+	}
+
+	.checkbox {
+		border: 1px solid $color-black;
+    height: 20px;
+    position: relative;
+		width: 20px;
+		
+		span {
+			height: 14px;
+			left: 2px;
+			top: 2px;
+			position: absolute;
+			width: 14px;
+		}
+	}
+
+	label {
+		a {
+			color: $color-black;
+			&:hover {
+				color: $color-black;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+// Buttons
+.form-buttons {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: $space-3x;
+
+	&.align-justify {
+		justify-content: space-between;
+	}
+
+	&.align-start {
+		justify-content: flex-start;
+	}
+
+	&.align-end {
+		justify-content: flex-end;
+	}
+
+	a {
+		color: $color-black;
+	}
+}

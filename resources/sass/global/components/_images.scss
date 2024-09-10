@@ -1,0 +1,31 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/images
+ * -----------------------------------------------------------------------------
+ *
+ * Various classes for image elements
+ */
+
+%is-responsive,
+.is-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+%is-object-fit {
+  display: block;
+  height: 100%;
+  max-width: none !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  top: inherit;
+  width: 100%;
+}
+
+%is-rounded,
+.is-rounded {
+  border-radius: 12px;
+}

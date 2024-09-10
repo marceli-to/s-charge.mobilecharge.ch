@@ -1,0 +1,53 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/menu
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-language {
+  align-items: center;
+  border: 1px solid $color-beige;
+  border-radius: 50%;
+  color: $color-black;
+  display: flex;
+  justify-content: center;
+  @include font-size($fs-menu);
+  height: 32px;
+  //margin-right: $space-4x;
+  margin-right: 0;
+  width: 32px;
+
+  @include bp-sm() {
+    //margin-right: $space-8x;
+  }
+
+  @include bp-md() {
+    margin-right: $space-8x;
+  }
+
+  @include bp-lg() {
+    border-radius: 500px;
+    height: 40px;
+    margin-right: $space-12x;
+    width: 76px;
+  }
+
+  img {
+    display: block;
+    height: 12px;
+    width: 16px;
+
+    @include bp-lg() {
+      margin-right: $space-2x;
+    }
+  }
+
+  span {
+    display: none;
+    text-transform: uppercase;
+
+    @include bp-lg() {
+      display: block;
+    }
+  }
+}

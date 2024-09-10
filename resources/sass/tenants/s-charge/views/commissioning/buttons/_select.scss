@@ -1,0 +1,16 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle-options
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-select {
+  border: 1px solid $color-grey;
+  color: $color-black;
+
+  &:hover,
+  &.is-selected {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,73 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle-options
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-toggle {
+  @include background-default();
+  align-items: center;
+  background-image: none;
+  background-size: 24px auto;
+  background-position: center right $space-8x;
+  background-color: $color-white;
+  border-radius: 12px;
+  color: $color-black;
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-column-gap: $space-4x;
+  @include font-bold();
+  @include font-size($fs-btn-toggle);
+  padding: $space-5x $space-6x;
+
+  @include bp-sm() {
+    background-image: url($url-icons + 'icon-plus.svg');
+    grid-column-gap: $space-6x;
+    padding: $space-5x $space-8x;
+    position: sticky;
+    top: 0;
+  }
+
+  > div {
+    align-items: center;
+    border: 1px solid $color-grey;
+    border-radius: 50%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    width: 48px;
+  
+    span {
+      color: $color-black;
+      @include font-size($fs-btn-toggle-number);
+    }
+
+    svg {
+      display: none;
+    }
+  }
+}
+
+.is-active {
+  .btn-toggle {
+    background-image: url($url-icons + 'icon-minus.svg');
+    background-color: $color-white;
+    z-index: 5;
+  }
+}
+
+.is-complete {
+  .btn-toggle {
+    > div {
+      border-color: $color-primary;
+      
+      span {
+        display: none;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+  }
+}

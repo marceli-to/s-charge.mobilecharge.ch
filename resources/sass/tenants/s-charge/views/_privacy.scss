@@ -1,0 +1,152 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/privacy
+ * -----------------------------------------------------------------------------
+ */
+
+ section.privacy-intro,
+ section.privacy-content {
+ 
+  strong {
+    color: $color-black;
+    @include font-medium();
+  }
+ 
+  p {
+    margin-bottom: $space-6x !important;
+  }
+ }
+ 
+ section.privacy-intro {
+   padding: $space-16x 0 $space-8x 0;
+ 
+   @include bp-sm() {
+     padding: $space-24x 0 $space-12x 0;
+   }
+ 
+   > div {
+     @extend %inner-block;
+    }
+ 
+   h1 {
+    margin-bottom: $space-4x;
+    max-width: 960px !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    hyphens: auto;
+    
+    @include bp-md() {
+      margin-bottom: $space-6x;
+    }
+  }
+ 
+  p {
+    @extend %mx-auto;
+    text-align: center;
+    max-width: 760px;
+  }
+ }
+ 
+section.privacy-content {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  @include bp-sm() {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  > div {
+    @extend %inner-block;
+    max-width: 960px !important;
+  }
+
+  a {
+    color: $color-steel;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    line-height: 1.15 !important;
+
+    &:not(:first-of-type) {
+      margin-top: $space-10x;
+    }
+  }
+
+  p, ul, ol {
+    @include font-size($fs-default);
+    line-height: 1.4 !important;
+  }
+
+  ol, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol,
+  ul {
+    margin-bottom: $space-6x;
+  }
+
+  ol {
+    li {
+      display: list-item;
+      list-style-type: decimal;
+    }
+  }
+
+  li {
+    display: list-item;
+    list-style-type: disc;
+    margin-left: $space-6x;
+    margin-bottom: $space-1x;
+
+    p {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  h2 {
+    color: $color-black;
+    @include font-bold();
+    @include font-size($fs-pricing-header-2);
+    margin-bottom: $space-6x;
+  }
+  
+  h3 {
+    @include font-medium();
+    line-height: 1 !important;
+  }
+
+  table th {
+    @include font-size($fs-xs);
+    line-height: 1.4 !important;
+    text-align: left;
+  }
+
+  table td {
+    @include font-size($fs-xs);
+    line-height: 1.3333 !important;
+    vertical-align: top;
+  }
+
+  table tr {
+    border-bottom: 1px solid $color-light-grey;
+  }
+
+  table tr td {
+    padding-bottom: $space-1x;
+    padding-top: $space-1x;
+  }
+
+  table tr th:not(:last-of-type),
+  table tr td:not(:last-of-type) {
+    padding-right: $space-4x;
+  }
+}
+ 

@@ -1,0 +1,170 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/configurator/form
+ * -----------------------------------------------------------------------------
+ */
+
+.configurator-form {
+  border: 1px solid $color-grey;
+  border-radius: 12px;
+  @include font-size($fs-default);
+
+  .configurator-header {
+    border-bottom: 1px solid $color-grey;
+    padding: $space-8x;
+
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+
+  > div {
+    padding: $space-6x $space-6x $space-12x $space-6x;
+    
+    @include bp-sm() {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $space-12x $space-8x $space-16x $space-8x;
+    }
+  }
+
+  p {
+    margin-bottom: $space-4x;
+  }
+
+  .configurator-form__products {
+    margin: $space-12x 0;
+
+    @include bp-sm() {
+      margin: $space-16x 0;
+
+      > div {
+        display: flex;
+      }
+    }
+
+    p {
+      display: none;
+    }
+
+    &.has-error-products {
+      p {
+        color: $color-danger;
+        display: block;
+        margin-bottom: $space-4x !important;
+      }
+    }
+  }
+
+  .form-row {
+    margin-bottom: $space-8x;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.is-radio {
+      margin-top: $space-12x;
+
+      @include bp-sm() {
+        margin-top: $space-16x;
+      }
+    }
+
+    &.is-submit {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: $space-16x;
+    }
+  }
+
+  label {
+    color: $color-black;
+    @include font-size($fs-default);
+    margin-bottom: $space-3x;
+
+    &.has-error {
+      color: $color-danger;
+    }
+
+    em {
+      color: $color-danger;
+    }
+  }
+
+  input[type=text],
+  input[type=email] {
+    align-content: center;
+    border: 1px solid $color-grey;
+    border-radius: 12px;
+    min-height: $space-14x;
+    display: inline-flex;
+    @include font-size($fs-sm);
+    @include font-medium();
+    padding: 0 $space-4x;
+
+    &.has-error {
+      border-color: $color-danger;
+    }
+  }
+
+  .radio button {
+    line-height: 1.3 !important;
+    text-align: left;
+  }
+}
+
+.configurator-form-confirmation {
+  border: 1px solid $color-grey;
+  border-radius: 12px;
+  @include font-size($fs-default);
+
+  > div {
+    padding: $space-8x;
+    
+    @include bp-sm() {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $space-24x $space-12x;
+    }
+  }
+
+  h1 {
+    @include font-bold();
+    @include font-size($fs-lg);
+    margin-bottom: $space-6x;
+
+    @include bp-sm() {
+      margin-bottom: $space-8x;
+    }
+  }
+
+  svg {
+    display: block;
+    height: 124px;
+    margin: 0 auto $space-6x auto;
+    width: 124px;
+
+    @include bp-sm() {
+      margin-bottom: $space-8x;
+    }
+  }
+
+  .configurator-form-confirmation__documents {
+    align-items: center;
+    flex-direction: column;
+
+    > div {
+      margin-bottom: $space-6x;
+    }
+    
+    margin-top: $space-12x;
+
+    @include bp-sm() {
+      margin-top: $space-24x;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/configurator/products
+ * -----------------------------------------------------------------------------
+ */
+
+  // Products
+.products-preview {
+
+}
+
+.product-preview {
+  
+}
+
+.products {
+  
+}
+
+.product {
+  border: 1px solid $color-grey;
+
+  .product-header {
+
+    h2 {
+      color: $color-black;
+    }
+  }
+
+  .product-images {
+    border-top: 1px solid $color-grey;
+  }
+
+  .product-summary-header {
+    border-top: 1px solid $color-grey;
+  }
+
+}
+
+.product-summary-header {
+    
+  a {
+    color: $color-dark;
+  }
+
+  h2 {
+    color: $color-black;
+  }
+
+  .product__total {
+    color: $color-black;
+  }
+}
+
+.product-summary {
+
+  .product-summary__item,
+  .product-summary__option,
+  .product-summary__total {
+    border-top: 1px solid $color-grey;
+  }
+
+  .product-summary__item,
+  .product-summary__total {
+    color: $color-black;
+  }
+
+  .product-summary__option {
+    h2 {
+      color: $color-black;
+    }
+  }
+
+  .product-summary__total {
+    a {
+      color: $color-primary;
+    }
+  }
+}
+
+.product-attributes {
+  border-top: 1px solid $color-grey;
+
+  div {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &.not-available {
+      border: 1px solid $color-danger;
+      color: $color-danger;
+    }
+
+  }
+}

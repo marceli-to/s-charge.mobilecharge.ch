@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/utilities
+ * -----------------------------------------------------------------------------
+ */
+
+.hide-sm {
+	display: none;
+	@include bp-md() {
+		display: block;
+	}
+}
+
+.hide-md {
+	display: block;
+	@include bp-md() {
+		display: none;
+	}
+}

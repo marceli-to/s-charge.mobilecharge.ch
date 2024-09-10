@@ -1,0 +1,23 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/sizes
+ * -----------------------------------------------------------------------------
+ *
+ * Helpers for inner and outer spacing
+ *
+ */
+
+// Step
+$step: 1px;
+$min: 1;
+$max: 100;
+
+@for $i from $min through $max { %w-#{$i}x, .w-#{$i}x { width: $i * $step; } }
+@for $i from $min through $max { %sm\:w-#{$i}x, .sm\:w-#{$i}x { @include bp-sm() { width: $i * $step; } } }
+@for $i from $min through $max { %md\:w-#{$i}x, .md\:w-#{$i}x { @include bp-md() { width: $i * $step; } } }
+@for $i from $min through $max { %lg\:w-#{$i}x, .lg\:w-#{$i}x { @include bp-lg() { width: $i * $step; } } }
+
+@for $i from $min through $max { %h-#{$i}x, .h-#{$i}x { height: $i * $step; } }
+@for $i from $min through $max { %sm\:h-#{$i}x, .sm\:h-#{$i}x { @include bp-sm() { height: $i * $step; } } }
+@for $i from $min through $max { %md\:h-#{$i}x, .md\:h-#{$i}x { @include bp-md() { height: $i * $step; } } }
+@for $i from $min through $max { %lg\:h-#{$i}x, .lg\:h-#{$i}x { @include bp-lg() { height: $i * $step; } } }

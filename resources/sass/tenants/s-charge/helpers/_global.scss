@@ -1,0 +1,26 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/global
+ * -----------------------------------------------------------------------------
+ *
+ */
+
+.select-none {
+  user-select: none;
+}
+
+.text-green {
+  color: $color-green;
+}
+
+.\!text-green {
+  color: $color-green !important;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.\!leading-none {
+  line-height: 1 !important;
+}

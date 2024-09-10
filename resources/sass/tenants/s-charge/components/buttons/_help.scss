@@ -1,0 +1,93 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/help
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-help {
+  align-items: center;
+  @include background-default();
+  background-image: none;
+  border: 2px solid $color-grey;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  width: 275px;
+
+  @include bp-sm() {
+    height: 137px;
+    width: 213px;
+  }
+
+  @include bp-md() {
+    height: 137px;
+    width: 272px;
+  }
+
+  &.is-selected,
+  &:hover {
+    background-image: url('../img/icons/icon-check.svg');
+    background-size: 24px;
+    background-position: bottom $space-2x right $space-2x;
+    border-color: $color-primary;
+  }
+
+  img {
+    @extend %is-responsive;
+  }
+
+  &.is-mobilecharge {
+    img {
+      max-width: 132px;
+      @include bp-md() {
+        max-width: 176px;
+      }
+    }
+  }
+
+  &.is-mobimo {
+    img {
+      max-width: 133px;
+      @include bp-md() {
+        max-width: 177px;
+      }
+    }
+  }
+
+  &.is-ewa {
+    img {
+      max-width: 110px;
+      @include bp-md() {
+        max-width: 124px;
+      }
+    }
+  }
+
+  &.is-ew-hoefe {
+    img {
+      max-width: 132px;
+      @include bp-md() {
+        max-width: 140px;
+      }
+    }
+  }
+
+  &.is-heinz-schmid {
+    img {
+      max-width: 215px;
+      @include bp-md() {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &.is-pac {
+    img {
+      max-width: 110px;
+      @include bp-md() {
+        max-width: 124px;
+      }
+    }
+  }
+}

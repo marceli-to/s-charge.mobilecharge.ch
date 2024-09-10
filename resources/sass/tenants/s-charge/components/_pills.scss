@@ -1,0 +1,63 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/pills
+ * -----------------------------------------------------------------------------
+ */
+
+.pill {
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 500px;
+  color: $color-primary;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  @include font-bold();
+  max-width: 340px;
+  margin-bottom: $space-8x;
+  min-height: 64px;
+  min-width: 190px;
+  padding: 16px 32px;
+  width: auto;
+
+  span {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  &.is-narrow {
+    margin-bottom: $space-4x;
+
+    + figure {
+      margin-bottom: $space-4x;
+    }
+  }
+
+  @include bp-sm {
+    max-width: none;
+  }
+}
+
+.pill-group {
+  margin-top: $space-10x;
+  .pill {
+    display: inline-block;
+    margin-right: $space-7x;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.pill-tag {
+  align-items: center;
+  background-color: rgba($color-primary, 0.2);
+  color: $color-primary;
+  @include font-size($fs-xxs);
+  @include font-bold();
+  line-height: 1 !important;
+  margin-right: $space-2x;
+  padding: 8px 16px;
+  display: inline-flex;
+  border-radius: 64px;
+}

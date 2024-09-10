@@ -1,0 +1,87 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/solution
+ * -----------------------------------------------------------------------------
+ */
+
+ section.parties {
+
+  article {
+
+    > div {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 490px;
+  
+      @include bp-md() {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
+      }
+    }
+
+    .text-media__image {
+      display: block;
+
+      @include bp-md() {
+        flex: 0 0 420px;
+      }
+
+      @include bp-lg() {
+        flex: 0 0 450px;
+      }
+      
+      img {
+        border-radius: 0;
+        filter: drop-shadow(0 34px 76px rgba(0, 0, 0, 0.25));
+        @include bp-sm() {
+          filter: drop-shadow(0 45px 100px rgba(0, 0, 0, 0.25));
+        }
+      }
+    }
+
+    .text-media__body {
+      margin-top: $space-16x;
+      @include bp-md() {
+        margin-top: 0;
+        max-width: 410px;
+      }
+    }
+
+    h1 {
+      margin-bottom: $space-12x;
+      @include bp-sm() {
+        margin-bottom: $space-24x;
+        text-align: left;
+      }
+    }
+
+    ul {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 345px;
+
+      @include bp-md() {
+        max-width: none;
+      }
+    }
+  }
+
+  &.is-reversed {
+    
+    @include bp-md() {
+      
+      .text-media__image {
+        order: 2;
+      }
+
+      .text-media__body {
+        order: 1;
+        @include bp-md() {
+          max-width: 475px;
+        }
+      }
+    }
+  }
+}

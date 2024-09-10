@@ -1,0 +1,84 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/global
+ * -----------------------------------------------------------------------------
+ */
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time],
+textarea,
+select,
+button {
+	background-color: transparent;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid $color-black;
+	color: $color-black;
+	display: block;
+	padding: 8px 4px;
+	position: relative;
+	outline: none !important;
+	width: 100%;
+	z-index: 1;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: $color-white;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time] {
+	&:focus {
+		background-color: $color-white;
+	}
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time],
+textarea,
+select {
+	transition: background-color .12s ease-out;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+	height: 150px;
+}
+ 
+select {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+ 
+select::-ms-expand {
+	display: none;
+}
+ 
+input[type=submit],
+button {
+	background-color: $color-black;
+	border-radius: 0;
+	color: $color-white;
+	display: block;
+	width: auto;
+}

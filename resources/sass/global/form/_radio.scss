@@ -1,0 +1,63 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/radio
+ * -----------------------------------------------------------------------------
+ */
+
+.radio {
+  align-items: center;
+  display: flex;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: $color-steel;
+    @include font-medium();
+    @include font-size($fs-md);
+    line-height: 1 !important;
+    margin-right: $space-11x;
+    min-height: 24px;
+    outline: none;
+    padding: 0 0 0 $space-10x;
+    position: relative;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:after,
+    &:before {
+      background-color: transparent;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 24px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 24px;
+      z-index: 1;
+    }
+
+    &:before {
+      border: 1px solid $color-grey;
+    }
+
+    &.is-selected {
+
+      &:before {
+        background-color: $color-tertiary;
+        border-color: $color-tertiary;
+      }
+
+      &:after {
+        background-color: $color-white;
+        height: 8px;
+        left: 8px;
+        top: 8px;
+        width: 8px;
+        z-index: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle-options
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-toggle {
+  background-color: $color-white;
+  color: $color-tertiary;
+
+  > div {
+    border: 1px solid $color-tertiary;
+  
+    span {
+      color: $color-tertiary;
+    }
+  }
+}
+
+.is-active {
+  .btn-toggle {
+    background-color: $color-white;
+  }
+}
+
+.is-complete {
+  .btn-toggle {
+    > div {
+      border-color: $color-primary;
+    }
+  }
+}

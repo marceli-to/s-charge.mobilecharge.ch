@@ -1,0 +1,375 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helper/mixins
+ * -----------------------------------------------------------------------------
+ */
+
+/**
+ * Scrollbars
+ * -----------------------------------------------------------------------------
+ */
+
+@mixin scrollbar($width: 6px, $color: #000000) {
+	::-webkit-scrollbar {
+		height: $width;
+	  width: $width;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #f9f9f9;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+	}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		background-color: $color;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background-color: $color;
+	}	
+}
+
+/**
+ * Vertical align
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      element {
+ *          @include vertical-align($position);
+ *      }
+ *
+ */
+ 
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+/**
+ * Cross browser opacity
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      img {
+ *          @include opacity(1,100);
+ *      }
+ *
+ */
+ 
+@mixin opacity($x: 0.5, $y: 60) {
+	opacity: $x;
+    filter: alpha(opacity=$y);
+}
+
+
+/**
+ * Set box shadow
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      div {
+ *          @include box-shadow(values);
+ *      }
+ *
+ */
+ 
+@mixin box-shadow($x: 5px, $y: 5px, $blur: 5px, $spread: 0px, $color: #000) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+	-ms-box-shadow: $x $y $blur $spread $color;
+	-o-box-shadow: $x $y $blur $spread $color;
+	box-shadow: $x $y $blur $spread $color;
+}
+
+
+/**
+ * Grayscale an image
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      img {
+ *          @include filter-grayscale(value);
+ *      }
+ *
+ */
+ 
+@mixin filter-grayscale($val: 100%) {
+	filter: grayscale($val);
+	-webkit-filter: grayscale($val);
+	-moz-filter: grayscale($val);
+	-o-filter: grayscale($val);
+	-ms-filter: grayscale($val);	
+}
+
+/**
+ * Background defaults
+ * -----------------------------------------------------------------------------
+ *
+ */
+ 
+@mixin background-default($repeat: no-repeat, $size: 100%, $position: top left) {
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+}
+
+/**
+ * Background cover
+ * -----------------------------------------------------------------------------
+ *
+ */
+ 
+@mixin background-cover() {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+/**
+ * Browser Prefixes
+ * -----------------------------------------------------------------------------
+ *
+ */
+ 
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin translateY($y) {
+	@include transform(translateY($y));
+}
+
+@mixin translateX($x) {
+	@include transform(translateY($x));
+}
+
+// Skew
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+%word-break,
+.word-break {
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+
+/**
+ * Visually hide an element
+ * -----------------------------------------------------------------------------
+ * This placeholder selector will visually hide an element while
+ * still make it accessible for screenreaders.
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @extend %visually-hidden;
+ *      }
+ *
+ */
+
+%visually-hidden,
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/**
+ * Clearfix
+ * -----------------------------------------------------------------------------
+ * A solid clearfix by Nicolas Gallagher.
+ * Source: (http://nicolasgallagher.com/micro-clearfix-hack/)
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @extend %clearfix;
+ *      }
+ *
+ */
+ 
+%clearfix,
+.clearfix,
+.cf {
+    *zoom: 1;
+
+    &:before {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+
+/**
+ * Media Queries
+ * -----------------------------------------------------------------------------
+ * A simple mixin for using media queries. Change the values to
+ * fit your sites needs.
+ * 
+ * Usage:
+ *
+ *      header {
+ *          @include bp-small() {
+ *              display: none;
+ *          }
+ *          @include bp-huge() {
+ *              display: block;
+ *          }
+ *      }
+ */
+
+
+@mixin bp-narrow {
+	@media only screen and (max-height: 760px) and (min-width: $bp-md) {
+		@content;
+	}
+}
+
+@mixin bp-xs {
+	@media only screen and (min-width: 600px) {
+		@content;
+	}
+}
+
+@mixin bp-sm {
+	@media only screen and (min-width: $bp-sm) {
+		@content;
+	}
+}
+
+@mixin bp-md {
+	@media only screen and (min-width: $bp-md) {
+		@content;
+	}
+}
+
+@mixin bp-lg {
+	@media only screen and (min-width: $bp-lg) {
+		@content;
+	}
+}
+
+@mixin bp-xl {
+	@media only screen and (min-width: $bp-xl) {
+		@content;
+	}
+}
+
+
+
+/**
+ * Set the width/height of an element
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @include width-height($sizes);
+ *      }
+ *
+ */
+
+ @mixin set-width-height($map, $breakpoints: $breakpoints) {
+	@each $breakpoint, $size in $map {
+		@if $breakpoint == null {
+			width: nth($size, 1);
+			height: nth($size, 2);
+		}
+		@else {
+			@if map-has-key($breakpoints, $breakpoint) {
+				$breakpoint: map-get($breakpoints, $breakpoint);
+			}
+			@media screen and (min-width: $breakpoint) {
+				width: nth($size, 1);
+				height: nth($size, 2);
+			}
+		}
+	}
+}
+
+/**
+ * Set a single (responsive) property
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @include responsive-prop('prop', $value, '!important');
+ *      }
+ *
+ */
+
+@mixin responsive-prop($prop, $map, $addProp: '', $breakpoints: $breakpoints) {
+	@each $breakpoint, $size in $map {
+		@if $breakpoint == null {
+			#{$prop}: nth($size, 1) #{$addProp};
+		}
+		@else {
+			@if map-has-key($breakpoints, $breakpoint) {
+				$breakpoint: map-get($breakpoints, $breakpoint);
+			}
+			@media screen and (min-width: $breakpoint) {
+				#{$prop}: nth($size, 1) #{$addProp};
+			}
+		}
+	}
+}

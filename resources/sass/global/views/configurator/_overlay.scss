@@ -1,0 +1,29 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/configurator/overlay
+ * -----------------------------------------------------------------------------
+ */
+
+.configurator-overlay {
+  background-color: rgba(255, 255, 255, 1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+
+  > div.loading-indicator {
+
+    span {
+      color: $color-primary;
+      @include font-size($fs-md);
+    }
+  }
+
+}

@@ -1,0 +1,70 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: views/advantages
+ * -----------------------------------------------------------------------------
+ */
+
+section.advantages {
+  
+  .advantage__items {
+
+    @include bp-sm() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: $space-9x;
+      grid-row-gap: $space-16x;
+    }
+
+    @include bp-md() {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: $space-18x;
+    }
+
+    @include bp-lg() {
+      grid-column-gap: 180px;
+      grid-row-gap: $space-26x;
+    }
+
+    .advantage-item {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $space-12x;
+      padding: 0 $space-3x;
+
+      @include bp-sm() {
+        margin-bottom: 0;
+      }
+
+      @include bp-md() {
+        padding: 0;
+      }
+
+      svg {
+        @extend %is-responsive;
+        max-width: 64px;
+        margin-bottom: $space-8x;
+      }
+
+      h2 {
+        color: $color-black;
+        @include font-medium();
+        @include font-size($fs-md);
+        margin-bottom: $space-2x;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 0;
+        text-align: center;
+      }
+
+      a {
+        color: $color-dark;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

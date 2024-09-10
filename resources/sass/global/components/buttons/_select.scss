@@ -1,0 +1,49 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle-options
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-select {
+  border: 1px solid $color-grey;
+  border-radius: 6px;
+  color: $color-black;
+  display: block;
+  @include font-size($fs-sm);
+  margin-bottom: $space-4x;
+  padding: $space-6x;
+  position: relative;
+  transition: color .08s ease-in, border .08s ease-in;
+
+  @include bp-sm() {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: $space-4x;
+    min-width: 240px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+
+  &:hover,
+  &.is-selected {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    svg {
+      display: block;
+    }
+  }
+
+  svg {
+    bottom: $space-4x;
+    display: none;
+    height: 24px;
+    position: absolute;
+    right: $space-4x;
+    width: 24px;
+  }
+}

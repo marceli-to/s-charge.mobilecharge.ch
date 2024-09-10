@@ -1,0 +1,34 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: view/configurator/form
+ * -----------------------------------------------------------------------------
+ */
+
+.configurator-form {
+  border: 1px solid $color-grey;
+
+  .configurator-header {
+    border-bottom: 1px solid $color-grey;
+  }
+
+
+  .configurator-form__products {
+
+  }
+
+  .form-row {
+  }
+
+  label {
+    color: $color-black;
+  }
+  input[type=date],
+  input[type=text],
+  input[type=email] {
+    border: 1px solid $color-grey;
+  }
+}
+
+.configurator-form-confirmation {
+  border: 1px solid $color-grey;
+}

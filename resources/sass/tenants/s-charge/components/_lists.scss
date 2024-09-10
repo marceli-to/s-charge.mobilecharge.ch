@@ -1,0 +1,90 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/lists
+ * -----------------------------------------------------------------------------
+ */
+
+ul.icon-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    align-items: center;
+    display: flex;
+    margin-bottom: $space-8x;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    svg {
+      @extend %is-responsive;
+      max-width: 64px !important;
+    }
+
+    span {
+      color: $color-black;
+      display: block;
+      @include font-medium();
+      margin-left: $space-6x;
+    }
+  }
+}
+
+ul.dash {
+  margin: 0 0 0 $space-2x;
+  padding: 0;
+  list-style: none;
+  padding-left: .8em;
+
+  li {
+    margin-bottom: $space-1x;
+    display: list-item;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
+
+    @include bp-md() {
+      margin-bottom: $space-2x;
+    }
+    
+    &:before {
+      display: inline-block;
+      content: "•";
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    &.is-spacer {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+ul.checkmark {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include background-default();
+    background-image: url('../img/icons/icon-check.svg');
+    background-size: 24px 24px;
+    background-position: left top;
+    display: list-item;
+    margin-bottom: $space-1x;
+    padding-left: 36px;
+
+    &:last-of-type {
+      margin-bottom: 0 !important;
+    }
+
+    @include bp-md() {
+      margin-bottom: $space-2x;
+    }
+        
+  }
+}

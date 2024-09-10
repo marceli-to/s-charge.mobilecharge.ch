@@ -1,0 +1,54 @@
+::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  @include font-size($fs-btn-accordion);
+  color: $color-black;
+  outline: none;
+
+  > div {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+details .close {
+  @extend %hidden;
+}
+
+details {
+  @include font-size($fs-accordion);
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @extend %flex;
+    @extend %items-center;
+
+    &:not(:last-of-type) {
+      @extend %mb-16x;
+    }
+
+    svg {
+      @extend %block;
+      @extend %mr-8x;
+      margin-top: -4px;
+      flex-shrink: 0;
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+details[open] .open {
+  @extend %hidden;
+}
+
+details[open] .close {
+  @extend %block;
+}

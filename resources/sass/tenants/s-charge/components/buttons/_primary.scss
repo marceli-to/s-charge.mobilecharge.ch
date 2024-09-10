@@ -1,0 +1,76 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/primary
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-primary {
+  @extend %btn;
+  align-items: center;
+  background-color: $color-primary;
+  border-radius: 64px;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  @include font-bold();
+  font-size: 18px;
+  height: 64px;
+  line-height: 1;
+  transition: background-color .08s ease-in;
+  width: 194px;
+
+  &.is-touched,
+  &:hover {
+    background-color: $color-black;
+
+    svg {
+      transform: translateX(2px);
+    }
+  }
+
+  span, svg {
+    display: block;
+  }
+
+  span {
+    margin-right: $space-1x;
+  }
+
+  svg {
+    margin-left: $space-1x;
+    transition: transform .08s ease-in;
+  }
+
+  &.is-outline {
+    background-color: transparent;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+  }
+
+  &.is-dark {
+    background-color: $color-white;
+    color: #4D4D4D;
+
+    &.is-touched,
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  &.is-back {
+    background-color: $color-white;
+    border: 2px solid $color-grey;
+    color: $color-black;
+    
+    &.is-touched,
+    &:hover {
+      border: 2px solid $color-primary;
+      color: $color-primary;
+    }
+  }
+
+  &.is-disabled {
+    background-color: $color-grey;
+    pointer-events: none;
+  }
+}

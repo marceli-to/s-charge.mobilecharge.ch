@@ -1,0 +1,48 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: layout/footer
+ * -----------------------------------------------------------------------------
+ */
+
+footer.site-footer {
+  background: $color-secondary !important;
+  color: $color-white !important;
+  padding: $space-12x 0 $space-8x 0 !important;
+  margin-top: 0 !important;
+
+
+  > div {
+    max-width: 760px;
+
+    @include bp-sm() {
+      padding-left: $space-24x;
+      padding-right: $space-24x;
+    }
+    
+    @include bp-md() {
+      max-width: $content-max-width;
+      padding-left: $space-10x;
+      padding-right: $space-10x;
+    }
+
+    @include bp-lg() {
+      padding-left: $space-12x;
+      padding-right: $space-12x;
+    }
+
+    > div {
+      @include bp-md() {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    text-align: center;
+  }
+
+}

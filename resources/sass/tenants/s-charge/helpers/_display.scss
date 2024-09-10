@@ -1,0 +1,58 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: helpers/display
+ * -----------------------------------------------------------------------------
+ *
+ * Helpers for display
+ *
+ */
+
+%block,
+.block {
+  display: block;
+}
+
+%hidden,
+.hidden {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.sm\:block {
+  @include bp-sm() {
+    display: block;
+  }
+}
+
+.md\:block {
+  @include bp-md() {
+    display: block;
+  }
+}
+
+.lg\:block {
+  @include bp-lg() {
+    display: block;
+  }
+}
+
+.sm\:hidden {
+  @include bp-sm() {
+    display: none;
+  }
+}
+
+.md\:hidden {
+  @include bp-md() {
+    display: none;
+  }
+}
+
+.lg\:hidden {
+  @include bp-lg() {
+    display: none;
+  }
+}

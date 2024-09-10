@@ -1,0 +1,23 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/global
+ * -----------------------------------------------------------------------------
+ */
+
+%btn,
+.btn {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  display: inline-block;
+  line-height: 1;
+  outline: none !important;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: $color-white;
+  @include transition(background-color .1s ease-out);
+}
+
+%btn-bg,
+.btn-bg {
+  @include background-default();
+}

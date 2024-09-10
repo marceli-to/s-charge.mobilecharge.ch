@@ -1,0 +1,37 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/toggle
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-configurator,
+button.btn-configurator,
+input[type="submit"].btn-configurator {
+
+  &.is-primary {
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: $color-white;
+    
+    &.is-touched,
+    &:hover {
+      background-color: $color-black;
+      border: 1px solid $color-black;
+    }
+  }
+
+  &.is-secondary {
+    background-color: $color-secondary;
+    border: 1px solid $color-grey;
+    color: $color-black;
+
+    &.is-touched,
+    &:hover {
+      background-color: $color-grey;
+    }
+
+    @include bp-sm() {
+      order: 1;
+    }
+  }
+}

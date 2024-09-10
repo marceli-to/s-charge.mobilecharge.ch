@@ -1,0 +1,19 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: form/global
+ * -----------------------------------------------------------------------------
+ */
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=date],
+input[type=time],
+textarea,
+select,
+button {
+  @include font-medium();
+  @include font-size($fs-sm);
+}
+ 

@@ -1,0 +1,15 @@
+/**
+ * -----------------------------------------------------------------------------
+ * File: components/buttons/info
+ * -----------------------------------------------------------------------------
+ */
+
+.btn-info {
+  @include background-default();
+  background-image: url($url-icons + 'icon-info.svg');
+  background-position: center center;
+  background-size: 19px 19px;
+  display: inline-block;
+  height: 19px;
+  width: 19px;
+}
