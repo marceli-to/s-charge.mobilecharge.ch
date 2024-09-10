@@ -8,7 +8,7 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     color: #363636;
     height: 100%;
     hyphens: auto;
@@ -105,7 +105,8 @@ img {
 /* Header */
 
 .header {
-    padding: 20px 0 0 40px;
+  background-color: #003652;
+  padding: 20px 0 20px 40px;
 }
 
 .header a {
