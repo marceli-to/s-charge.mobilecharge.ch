@@ -260,8 +260,9 @@
 
     &.is-secondary {
       background-color: $color-secondary;
-      border: 1px solid transparent;
+      border: 1px solid $color-white;
       color: $color-white;
+      transition: all .2s ease-in-out;
 
       &:hover {
         border: 1px solid $color-tertiary;
