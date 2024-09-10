@@ -399,12 +399,12 @@
   }
 
   .message-success {
-    color: $color-success;
+    color: $color-tertiary;
     @include font-medium();
   }
 
   .message-errors {
-    color: $color-danger;
+    color: $color-primary;
     @include font-medium();
   }
 }
