@@ -40,8 +40,8 @@ input[type="submit"].btn-configurator {
     
     &.is-touched,
     &:hover {
-      background-color: $color-black;
-      border: 1px solid $color-black;
+      background-color: $color-tertiary;
+      border: 1px solid $color-tertiary;
     }
     
     @include bp-sm() {
