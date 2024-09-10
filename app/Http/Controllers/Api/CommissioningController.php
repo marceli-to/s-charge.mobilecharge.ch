@@ -266,7 +266,7 @@ class CommissioningController extends Controller
     $file->move($path, $filename);
 
     return [
-      'uri' => url('/storage-mobilecharge/commissioning/contracts/' . $filename),
+      'uri' => url('/storage/commissioning/contracts/' . $filename),
       'filename' => $filename,
     ];
   }
