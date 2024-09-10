@@ -257,9 +257,15 @@
   .btn-commissioning {
     background-color: $color-primary;
     @include font-size($fs-md);
+
     &.is-secondary {
       background-color: $color-secondary;
+      border: 1px solid transparent;
       color: $color-white;
+
+      &:hover {
+        border: 1px solid $color-tertiary;
+      }
     }
 
     &.disabled {
