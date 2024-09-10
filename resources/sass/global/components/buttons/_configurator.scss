@@ -18,13 +18,14 @@ input[type="submit"].btn-configurator {
   line-height: 1 !important;
   margin-bottom: $space-6x;
   min-height: 64px;
-  padding: 0 $space-16x;
+  padding: 0 $space-8x;
   text-indent: 0;
   transition: background-color .08s ease-in, border .08s ease-in;
   width: auto;
 
   @include bp-sm() {
     margin-bottom: 0;
+    padding: 0 64px;
   }
 
   &:last-child {

@@ -7,6 +7,7 @@
 .commissioning-app {
   background-color: $color-secondary;
   color: $color-white;
+  padding-top: 24px;
 
   .loading {
     background-color: $color-white;
@@ -38,6 +39,11 @@
     margin-bottom: $space-4x !important;
     max-width: 800px;
   }
+
+  @include bp-sm() {
+    padding-top: 48px;
+  }
+
 
   @include bp-md() {
     padding-bottom: 0 !important;
@@ -219,7 +225,7 @@
       }
 
       .btn-commissioning {
-        @extend %px-32x;
+        @extend %px-24x;
       }
       // a class name should no start with .btn
       a:not(.btn-commissioning) {

@@ -17,6 +17,15 @@
   }
 }
 
+.has-group-error {
+  .btn-toggle {
+    color: $color-danger;
+    > div {
+      border-color: $color-danger;
+    }
+  }
+}
+
 .is-active {
   .btn-toggle {
     background-color: $color-white;

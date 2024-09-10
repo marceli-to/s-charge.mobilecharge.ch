@@ -21,7 +21,7 @@ nav.language-menu {
   }
 
   @include bp-sm() {
-    background-color: rgba(0,0,0, .6);
+    background-color: rgba(0,0,0,.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +46,7 @@ nav.language-menu {
   }
 
   h2 {
-    color: $color-black;
+    color: $color-tertiary;
     @include font-bold();
     @include font-size($fs-language-header);
     margin-bottom: $space-6x;

@@ -6,20 +6,15 @@
 
 .btn-language {
   align-items: center;
-  border: 1px solid $color-beige;
+  border: 1px solid $color-white;
   border-radius: 50%;
-  color: $color-black;
+  color: $color-white;
   display: flex;
   justify-content: center;
   @include font-size($fs-menu);
   height: 32px;
-  //margin-right: $space-4x;
   margin-right: 0;
   width: 32px;
-
-  @include bp-sm() {
-    //margin-right: $space-8x;
-  }
 
   @include bp-md() {
     margin-right: $space-8x;

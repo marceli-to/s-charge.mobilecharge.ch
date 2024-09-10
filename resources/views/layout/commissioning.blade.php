@@ -25,7 +25,7 @@
 <meta name="csrf-token" value="{{ csrf_token() }}" />
 </head>
 <body>
-{{-- @include('layout.partials.header') --}}
+@include('layout.partials.header')
 <main id="app-form">
   <commissioning-form uuid="{{ request()->uuid ?? null }}" />
 </main>

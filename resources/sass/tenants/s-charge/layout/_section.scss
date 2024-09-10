@@ -7,21 +7,13 @@
 section {
   background-color: $color-white;
   padding-bottom: $space-9x;
-  padding-top: $space-24x;
 
   @include bp-sm() {
     padding-bottom: 72px;
-    padding-top: 124px;
   }
 
   @include bp-md() {
     padding-bottom: 200px;
-    padding-top: 96px;
-  }
-
-  @include bp-lg() {
-    padding-bottom: 216px;
-    padding-top: 132px;
   }
   
   img {

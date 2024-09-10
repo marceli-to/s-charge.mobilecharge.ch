@@ -5,8 +5,16 @@
  */
 
 .logo {
-  height: 48px;
-  width: 164px;
+  height: auto;
+  width: 200px;
+
+  @include bp-sm() {
+    width: 240px;
+  }
+
+  @include bp-md() {
+    width: 300px;
+  }
 
   svg {
     @extend %is-responsive;

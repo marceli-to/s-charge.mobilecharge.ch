@@ -14,15 +14,16 @@
   border-radius: 12px;
   color: $color-black;
   display: grid;
-  grid-template-columns: 48px auto;
+  grid-template-columns: 36px auto;
   grid-column-gap: $space-4x;
   @include font-bold();
   @include font-size($fs-btn-toggle);
-  padding: $space-5x $space-6x;
+  padding: $space-4x $space-4x;
 
   @include bp-sm() {
     background-image: url($url-icons + 'icon-plus.svg');
     grid-column-gap: $space-6x;
+    grid-template-columns: 48px auto;
     padding: $space-5x $space-8x;
     position: sticky;
     top: 0;
@@ -32,10 +33,15 @@
     align-items: center;
     border: 1px solid $color-grey;
     border-radius: 50%;
-    height: 48px;
+    height: 36px;
     display: flex;
     justify-content: center;
-    width: 48px;
+    width: 36px;
+
+    @include bp-sm() {
+      height: 48px;
+      width: 48px;
+    }
   
     span {
       color: $color-black;
