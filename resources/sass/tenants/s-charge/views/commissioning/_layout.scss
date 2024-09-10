@@ -215,8 +215,10 @@
 
   .lightbox {
     background-color: rgba(0,0,0,0.9);
+
     > div {
       background-color: $color-white;
+      color: $color-dark;
       max-width: 400px !important;
       min-width: 90%;
       @include bp-sm() {
@@ -232,6 +234,12 @@
         color: $color-primary;
       }
 
+      h2 {
+        color: $color-dark;
+        @include font-bold();
+        @include font-size($fs-md);
+      }
+
     }
 
     .is-success {
@@ -239,9 +247,6 @@
     }
 
     form {
-      @extend %p-24x;
-      border-radius: 12px;
-      background-color: #f9f9f9;
 
       a:not(.btn-commissioning) {
         @include font-size($fs-xs);

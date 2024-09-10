@@ -115,7 +115,7 @@ return [
     'markdown' => [
         'theme' => env('TENANT_KEY', 'default'),
         'paths' => [
-            resource_path('views/tenants/' . env('TENANT_KEY', 'default') .'/vendor/mail'),
+            resource_path('views/vendor/mail'),
         ],
     ],
 

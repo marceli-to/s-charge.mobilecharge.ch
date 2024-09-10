@@ -173,34 +173,35 @@ class CommissioningController extends Controller
 
   public function save(Request $request)
   {
-  // store the request as json in /storage/app/commissioning/temp
-  // create the folder if it does not exist
-  $path = storage_path('app/commissioning/temp');
-  if (!file_exists($path)) {
-    mkdir($path, 0777, true);
-  }
-  // Generate a UUID for the filename if it does not exist
-  $uuid = $request->uuid ? $request->uuid : \Str::uuid();
-  $filename = $uuid . '.json';
+    // store the request as json in /storage/app/commissioning/temp
+    // create the folder if it does not exist
+    $path = storage_path('app/commissioning/temp');
+    if (!file_exists($path)) {
+      mkdir($path, 0777, true);
+    }
+    
+    // Generate a UUID for the filename if it does not exist
+    $uuid = $request->uuid ? $request->uuid : \Str::uuid();
+    $filename = $uuid . '.json';
 
-  $data = $request->all();
+    $data = $request->all();
 
-  // Handle the contract file upload
-  $contract = null;
-  if ($request->contract)
-  {
-    $contract = $this->handleUpload($uuid, $request->contract);
-    $data['contract'] = $contract;
-  }
+    // Handle the contract file upload
+    $contract = null;
+    if ($request->contract)
+    {
+      $contract = $this->handleUpload($uuid, $request->contract);
+      $data['contract'] = $contract;
+    }
 
-  // Save the request as json
-  file_put_contents($path . '/' . $filename, json_encode($data));
+    // Save the request as json
+    file_put_contents($path . '/' . $filename, json_encode($data));
 
-  // Generate download link to the route 'page_commissioning' with the UUID as parameter
-  // get current locale
-  $locale = app()->getLocale();
-  $url = route($locale . '.page_commissioning', ['uuid' => $uuid]);
-  return response()->json(['edit_url' => $url], 200);
+    // Generate download link to the route 'page_commissioning' with the UUID as parameter
+    // get current locale
+    $locale = app()->getLocale();
+    $url = route($locale . '.page_commissioning', ['uuid' => $uuid]);
+    return response()->json(['edit_url' => $url], 200);
   }
 
   public function removeContract($uuid)
