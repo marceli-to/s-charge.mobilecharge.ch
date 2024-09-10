@@ -34,18 +34,7 @@
                   <div :class="[errors.subscription ? 'has-error' : '', 'form-group']">
                     <header>
                       <h3>{{ __('Gewünschtes Abonnement') }}</h3>
-                      <template v-if="_getLocale() == 'de'">
-                        <p>Informationen zu Abonnements und Preisen sind in der online verfügbaren <a href="/de/preise" target="_blank">Preisliste</a> einsehbar.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'en'">
-                        <p>Information on subscriptions and prices can be found in the online <a href="/en/prices" target="_blank">price list</a>.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'fr'">
-                        <p>Les informations relatives aux abonnements et aux prix peuvent être consultées dans la <a href="/fr/prix" target="_blank">liste des prix disponible en ligne</a>.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'it'">
-                        <p>Le informazioni sugli abbonamenti e sui prezzi sono disponibili nel <a href="/it/prezzi" target="_blank">lista dei prezzi online</a>.</p>
-                      </template>
+                      <p>Informationen zu Abonnements und Preisen sind in der online verfügbaren <a href="https://mobilecharge.ch/de/preise" target="_blank">Preisliste</a> einsehbar.</p>
                     </header>
                     <div class="form-input sm:flex">
                       <div class="radio">
@@ -646,18 +635,7 @@
                 <div class="option-element">
                   <div class="form-group">
                     <header>
-                      <template v-if="_getLocale() == 'de'">
-                        <p>Nach dem <a href="/assets/mobilecharge/downloads/Nutzungsvertrag_mobilecharge.pdf" target="_blank">Herunterladen</a> bitten wir um Ausfüllung und Unterzeichnung des Dokuments. Bitte laden Sie den unterzeichneten Vertrag anschließend wieder hoch.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'en'">
-                        <p>After <a href="/assets/mobilecharge/downloads/Nutzungsvertrag_mobilecharge.pdf" target="_blank">downloading</a>, please complete and sign the document. Please upload the signed contract again afterwards.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'fr'">
-                        <p>Après le <a href="/assets/mobilecharge/downloads/Nutzungsvertrag_mobilecharge-fr.pdf" target="_blank">téléchargement</a>, nous vous prions de remplir et de signer le document. Veuillez ensuite télécharger à nouveau le contrat signé.</p>
-                      </template>
-                      <template v-if="_getLocale() == 'it'">
-                        <p>Dopo aver <a href="/assets/mobilecharge/downloads/Nutzungsvertrag_mobilecharge-it.pdf" target="_blank">scaricato</a>, completare e firmare il documento. Caricare nuovamente il contratto firmato in seguito.</p>
-                      </template>
+                      <p>Nach dem <a href="https://mobilecharge.ch/assets/mobilecharge/downloads/Nutzungsvertrag_mobilecharge.pdf" target="_blank">Herunterladen</a> bitten wir um Ausfüllung und Unterzeichnung des Dokuments. Bitte laden Sie den unterzeichneten Vertrag anschließend wieder hoch.</p>
                     </header>
                   </div>
                   <div class="form-group">
